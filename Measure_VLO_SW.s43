@@ -1,0 +1,69 @@
+;*******************************************************************************
+;  This code measures the period of the 2xx integrated VLO.
+;
+;
+;
+;  Andreas Dannenberg
+;  MSP430 Applications
+;  Texas Instruments Inc.
+;  May 2007
+;  Built with IAR Embedded Workbench Version: 3.42A
+;*******************************************************************************
+#include "msp430x20x1.h"
+
+            MODULE  Measure_VLO_SW
+
+            ; Functions
+            PUBLIC  Measure_VLO_SW
+
+            RSEG    CODE                    ; Code is relocatable
+            EVEN                            ; Ensure alignment
+;-------------------------------------------------------------------------------
+Measure_VLO_SW
+;
+;  This function returns in R12 the period length of one VLO clock period
+;  in us. The state of all used peripherals but Timer_A is conserved.
+;  Interrupts must be disabled while the function is executed.
+;
+;  The function follows the IAR C calling conventions. The appropriate C
+;  prototype is this:
+;
+;  extern unsigned int Measure_VLO_SW(void)
+;-------------------------------------------------------------------------------
+            mov.b   &BCSCTL1,R15            ; Save DCO configuration
+            mov.b   &DCOCTL,R14             ; to scratch registers
+            mov.b   &BCSCTL3,R13
+
+            mov.b   &CALBC1_1MHZ, &BCSCTL1  ; Set DCO = 1MHz
+            mov.b   &CALDCO_1MHZ, &DCOCTL   ;
+            bis.b   #DIVA_3,      &BCSCTL1  ; ACLK = ACLK/8
+            mov.b   #LFXT1S_2,    &BCSCTL3  ; ACLK = VLO
+
+            clr.w   R12                     ; R12 will hold result
+
+            mov.w   #7,&TACCR0              ; Timer_A Period = 8 ACLK Cycles
+            mov.w   #TASSEL_1+MC_1+TACLR, &TACTL; ACLK, up-mode, clear, start
+
+Wait1st     bit.w   #TAIFG,&TACTL           ; Wait for first overflow
+            jz      Wait1st
+            bic.w   #TAIFG,&TACTL           ; Clear overflow interrupt flag
+
+Wait2nd     inc.w   R12                     ; Count loop iterations (1 Cyc)
+            nop                             ; Stuffer NOP (1 Cyc)
+            bit.w   #TAIFG,&TACTL           ; (4 Cyc)
+            jz      Wait2nd                 ; Wait for 2nd overflow (2 Cyc)
+
+            clr.w   &TACTL                  ; Stop Timer_A
+
+            clrc                            ; R12 = R12 / 8
+            rrc.w   R12
+            rra.w   R12
+            rra.w   R12
+
+            mov.b   R15,&BCSCTL1            ; Restore config
+            mov.b   R14,&DCOCTL
+            mov.b   R13,&BCSCTL3
+
+            ret
+
+            END

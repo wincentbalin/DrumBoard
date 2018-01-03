@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<Workspace>
+  <ConfigDictionary>
+    
+  <CurrentConfigs><Project>DrumBoard/Debug</Project></CurrentConfigs></ConfigDictionary>
+  <Desktop>
+    <Static>
+      <Workspace>
+        <ColumnWidths>
+          
+          
+          
+          
+        <Column0>212</Column0><Column1>27</Column1><Column2>27</Column2><Column3>27</Column3></ColumnWidths>
+      </Workspace>
+      <Build>
+        
+        
+        
+        
+      <PreferedWindows><Position>3</Position><ScreenPosX>0</ScreenPosX><ScreenPosY>0</ScreenPosY><Windows/></PreferedWindows><ColumnWidth0>20</ColumnWidth0><ColumnWidth1>915</ColumnWidth1><ColumnWidth2>244</ColumnWidth2><ColumnWidth3>61</ColumnWidth3></Build>
+      <TerminalIO/>
+      <CodeCoveragePlugin/>
+    <Debug-Log><PreferedWindows><Position>3</Position><ScreenPosX>0</ScreenPosX><ScreenPosY>0</ScreenPosY><Windows/></PreferedWindows></Debug-Log></Static>
+    <Windows>
+      
+      
+    <Wnd0>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-23859-6342</Identity>
+            <TabName>Workspace</TabName>
+            <Factory>Workspace</Factory>
+            <Session>
+              
+            <NodeDict><ExpandedNode>DrumBoard</ExpandedNode><ExpandedNode>DrumBoard/ODBM</ExpandedNode></NodeDict></Session>
+          </Tab>
+        </Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd0><Wnd2><Tabs><Tab><Identity>TabID-7415-3187</Identity><TabName>Build</TabName><Factory>Build</Factory><Session/></Tab></Tabs><SelectedTab>0</SelectedTab></Wnd2></Windows>
+    <Editor>
+      
+      
+      
+      
+    <Pane><Tab><Factory>TextEditor</Factory><Filename>C:\Dokumente und Einstellungen\wincent\Eigene Dateien\IAR Embedded Workbench\DrumBoard\Debug\List\DrumBoard.lst</Filename><XPos>0</XPos><YPos>752</YPos><SelStart>36335</SelStart><SelEnd>36335</SelEnd></Tab><ActiveTab>0</ActiveTab><Tab><Factory>TextEditor</Factory><Filename>C:\Dokumente und Einstellungen\wincent\Eigene Dateien\IAR Embedded Workbench\DrumBoard\DrumBoardSynth.c</Filename><XPos>0</XPos><YPos>195</YPos><SelStart>3183</SelStart><SelEnd>3183</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>C:\Dokumente und Einstellungen\wincent\Eigene Dateien\IAR Embedded Workbench\DrumBoard\DrumBoard.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>210</SelStart><SelEnd>210</SelEnd></Tab></Pane><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
+    <Positions>
+      
+      
+      
+      
+      
+    <Top><Row0><Sizes><Toolbar-012a9758><key>iaridepm.enu1</key></Toolbar-012a9758></Sizes></Row0></Top><Left><Row0><Sizes><Wnd0><Rect><Top>-2</Top><Left>-2</Left><Bottom>462</Bottom><Right>286</Right><x>-2</x><y>-2</y><xscreen>-2044399</xscreen><yscreen>-1033694</yscreen><sizeHorzCX>-1597186718</sizeHorzCX><sizeHorzCY>-1483061692</sizeHorzCY><sizeVertCX>225000</sizeVertCX><sizeVertCY>665710</sizeVertCY></Rect></Wnd0></Sizes></Row0></Left><Right><Row0><Sizes/></Row0></Right><Bottom><Row0><Sizes><Wnd2><Rect><Top>-2</Top><Left>-2</Left><Bottom>191</Bottom><Right>1282</Right><x>-2</x><y>-2</y><xscreen>1284</xscreen><yscreen>193</yscreen><sizeHorzCX>1003125</sizeHorzCX><sizeHorzCY>276901</sizeHorzCY><sizeVertCX>156250</sizeVertCX><sizeVertCY>276901</sizeVertCY></Rect></Wnd2></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
+  </Desktop>
+</Workspace>
+
+
